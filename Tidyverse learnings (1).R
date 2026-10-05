@@ -11,7 +11,8 @@ library(ggthemes)
 ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) +   geom_point(mapping = aes(colour = species, shape = species))   +   geom_smooth(method = "lm") + labs(title =  "Body mass and flipper length", subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins", x = "Flipper length (mm)", y = "Body mass (g)", colour = "Species", shape = "Species") + scale_color_colorblind()
 
 # Q0 How many rows are in penguins? How many columns?
-  
+nrow(penguins) #for number of observations(rows) in the penguin variable, will print number as an integer
+ncol(penguins) #same output as above but for columns instead, will print the number as integer
   
   
 #Q1 What does the bill_depth_mm variable in the penguins data frame describe? Read the help for ?penguins to find out.
